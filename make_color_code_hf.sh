@@ -58,7 +58,9 @@ else
 	sed -i -e "s/\([0-9][0-9]*\)/[#9C27B0]\1[\/#9C27B0]/g" $1
 
 	#sed de remplacement du texte entre guillemet quote et paranthese en vert
-	sed -i -e "s/\(([a-zA-Z][a-zA-Z]*)\)/[#8BC34A][b]\1[\/b][\/#8BC34A]/g" $1
+	sed -i -e "s/\(\"[a-zA-Z][a-zA-Z]*\"\)/[#8BC34A][b]\1[\/b][\/#8BC34A]/g" $1
+
+	sed -i -e "s/\(([a-zA-Z][a-zA-Z]*)\)/[#009688][b]\1[\/b][\/#009688]/g" $1
 	
 
 ######################################################
@@ -66,4 +68,5 @@ else
 	echo "done"
 	echo "fichier original : $name_file"
 	echo "nouveau fichier $2"
+	cat $2
 fi
